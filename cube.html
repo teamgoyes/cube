@@ -361,6 +361,26 @@ h1 {
 			keySpace = false
 			playMode = "scramble";
 		}
+	} 
+	else if (playMode == "completed") {
+		//------------
+		// Win Screen
+		//------------
+		
+		ctx.fillStyle = "white";
+		ctx.fillText("you won the game", STAGE_WIDTH/3, STAGE_HEIGHT/2-10);
+		ctx.fillText("can you win again though", STAGE_WIDTH/3, 23+STAGE_HEIGHT/2-10);
+		ctx.fillText("press space to continue", STAGE_WIDTH/3, 65+STAGE_HEIGHT/2-10);
+		
+		if (keySpace) {
+			initialize = true;
+			keyS = false
+			keyA = false
+			keyW = false
+			keyD = false
+			keySpace = false
+			playMode = "scramble";
+		}
 	}
 	else if (playMode == "scramble") {
 		//----------------------------------------
@@ -492,8 +512,7 @@ h1 {
 			}
 				
 			if (checki == boxArray.length-1){
-				alert('how high can you go ?');
-				playMode = "scramble"
+				playMode = "completed"
 				initialize = true;
 				BOXES_PER_ROW += 1;
 				BOXES_PER_COLUMN +=1;
