@@ -123,7 +123,6 @@ var die = {
 gameloop = setInterval(update, TIME_PER_FRAME);			
 //stage.addEventListener("click", canvasClick, false);
 
-
 // Handle key presses
 var keyW = false;
 var keyA = false;
@@ -198,7 +197,6 @@ var previewWidth = STAGE_WIDTH/8;
 var previewHeight = STAGE_WIDTH/8;
 var previewBoxWidth = previewWidth/(BOXES_PER_ROW);
 var previewBoxHeight = previewHeight/(BOXES_PER_COLUMN);
-
 
 var buttons = new Array();
 buttons = [keyA, keyD, keyW, keyS];
@@ -334,7 +332,6 @@ function getGridNumber(x,y)
 {
     return (y-1)*(BOXES_PER_ROW) + (x-1);
 }
-
 
 //------------
 //Game Loop
@@ -605,8 +602,6 @@ function drawSkewedRect(xPos, yPos, horOrVert, fillin)
 	ctx.stroke();
 }
 
-	
-	
 </script>
 </body>
 </html>
